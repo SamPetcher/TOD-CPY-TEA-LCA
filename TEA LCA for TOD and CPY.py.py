@@ -51,11 +51,11 @@ bst.preferences.update(flow='kg/hr', T='degK', P='Pa', N=100, composition=True)
 #  Prices 
 actual_prices = {
 "HDPE": 25.05/1000, # $/kg from 22 per MT, because feed is defined per MT
-"Ethylene": 0.61, # Gracida Al
-"Propylene":0.97, # $/kg
+"Ethylene": 0.86, # Gracida Al
+"Propylene":0.8, # $/kg
 "Butene": 1.27,# Butene 1.27 $/kg from Yadav et al. 2023
-"Naphtha": 0.86,  # Gracida Alvarez et al
-"Diesel": 0.84,  # Gracida Alvarez et al
+"Naphtha": 0.65,  # Gracida Alvarez et al
+"Diesel": 0.64,  # Gracida Alvarez et al
 "Wax": 0.3, #   1989 USD/MT   source: https://www.chemanalyst.com/Pricing-data/paraffin-wax-1205
 "NG": 7.40 * 1000 * 1.525/28316.8, 
 "Hydrocracking catalyst": 15.5 * 2.20462262,      #15.5 $/lb 2.20462262 is factor to convert to $/kg from Jones et al. 2009 PNNL report SRI international 2007
@@ -604,18 +604,18 @@ def run_scenario(scenario = cpy,capacity=plant_capacity,prices=actual_prices):
 
 run_scenario(scenarios[1])
 #  %% 
-# all_scen = []
-# for i, scen in enumerate(scenarios):
-#     try:
-#         print(f"trying {scenarios_labels[i]}")
-#         system = run_scenario(scen)
-#         # system.save_report(f"Scenario_{scenarios_labels[i]}_report.xlsx")
-#         print(f"***********************************\n {scenarios_labels[i]} ran succesfully \n ***********************************")
-#         all_scen.append(system)
-#     except:
-#         print(f"***********************************\n {scenarios_labels[i]} failed \n {scenarios_labels[i]} failed \n {scenarios_labels[i]} failed \n ***********************************")
-#     print("-------------------------------")
-#     print("-------------------------------")
+all_scen = []
+for i, scen in enumerate(scenarios):
+    try:
+        print(f"trying {scenarios_labels[i]}")
+        system = run_scenario(scen)
+        # system.save_report(f"Scenario_{scenarios_labels[i]}_report.xlsx")
+        print(f"***********************************\n {scenarios_labels[i]} ran succesfully \n ***********************************")
+        all_scen.append(system)
+    except:
+        print(f"***********************************\n {scenarios_labels[i]} failed \n {scenarios_labels[i]} failed \n {scenarios_labels[i]} failed \n ***********************************")
+    print("-------------------------------")
+    print("-------------------------------")
 # %%
 
 
