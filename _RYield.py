@@ -4,7 +4,7 @@ import biosteam as bst
 from biosteam import Unit
 from biosteam.units.decorators import cost
 
-@cost(basis='Infeed', ID= 'reactor', units='tonnes/day', S= 500, CE=567.5, cost=8766341.78, n=0.6, BM=4.28)
+@cost(basis='Infeed', ID= 'reactor', units='tonnes/day', S= 500, CE=567.5, cost=1766341.78, n=0.6, BM=4.28, kW=75000)
 
 class RYield(bst.Unit):
     _N_ins = 1
