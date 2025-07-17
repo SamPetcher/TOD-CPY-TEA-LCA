@@ -4,3 +4,11 @@
 # Ignore Python byte‐code cache
 __pycache__/
 *.py[cod]
+polypop_files/
+Scenario_CPY_report.xlsx
+Scenario_CPY-HC_report.xlsx
+Scenario_HRT_report.xlsx
+Scenario_HRT-HC_report.xlsx
+Scenario_TOD_report.xlsx
+Scenario_TOD-HC_report.xlsx
+polypop.html
